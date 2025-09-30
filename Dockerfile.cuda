@@ -1,0 +1,11 @@
+FROM nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
+ARG FACEFUSION_VERSION=master
+ENV GRADIO_SERVER_NAME=0.0.0.0
+
+RUN apt-get update
+RUN apt-get install python3.11 -y
+RUN apt-get install python-is-python3 -y
+RUN apt-get install pip -y
+RUN apt-get install git -y
+RUN apt-get install ffmpeg -y
+RUN apt-get -y install curl
